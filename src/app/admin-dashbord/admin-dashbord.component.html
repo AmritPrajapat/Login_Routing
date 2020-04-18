@@ -1,0 +1,20 @@
+<div class="container">
+
+<h1> Welcome {{name}}</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>  <th>First Name</th> <th>Last Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of emp">
+            <td>{{item.id}}</td>
+            <td>{{item.firstName}}</td>
+            <td>{{item.lastName}}</td>
+            <td><button (click)="deleteData(item.id)" class="btn btn-primary">Delete</button>  </td>
+        </tr>
+    </tbody>
+</table>
+</div>
